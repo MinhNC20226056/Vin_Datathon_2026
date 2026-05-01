@@ -1,0 +1,14 @@
+# Core ML
+catboost==1.2.10
+scikit-learn==1.8.0
+
+# Data processing
+numpy==2.4.4
+pandas==3.0.2
+
+# Visualisation
+matplotlib==3.10.9
+seaborn==0.13.2
+
+# Notebook runtime
+jupyter==1.1.1

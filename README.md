@@ -86,5 +86,55 @@ Time-aware hold-out on **2021–2022** (the period closest to the recent demand 
 ├── part2_eda.ipynb                      # Part 1 — Business EDA
 ├── final_solution.ipynb                 # Part 2 — ML model & Kaggle submission
 ├── datathon-hackathon-mcq-phase-1.ipynb # Phase 1 MCQ notebook
+├── requirements.txt                     # Python dependencies
 └── README.md                            # This file
 ```
+
+---
+
+## How to Run
+
+### Prerequisites
+- Python 3.10 or higher
+- The competition dataset CSV files placed in the same directory as the notebooks (or update the path variable inside each notebook)
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the EDA notebook (Part 1)
+
+```bash
+jupyter notebook part2_eda.ipynb
+```
+
+Execute all cells from top to bottom (Kernel → Restart & Run All).  
+The notebook produces inline charts summarising the business findings documented above.
+
+### 3. Run the ML forecasting notebook (Part 2 — generates submission)
+
+```bash
+jupyter notebook final_solution.ipynb
+```
+
+Execute all cells from top to bottom (Kernel → Restart & Run All).
+
+**Output files produced in the working directory:**
+
+| File | Description |
+|------|-------------|
+| `submission.csv` | Kaggle submission file (Date, Revenue, COGS) |
+| `submission_final.csv` | Full forecast series (research artifact) |
+| `final_validation_recent_cv.csv` | Validation metrics per target |
+| `final_feature_importance.csv` | Feature importance table |
+| `final_shap_summary.csv` | Mean absolute SHAP values per feature per target |
+
+### 4. (Optional) Run without a browser — command-line execution
+
+```bash
+jupyter nbconvert --to notebook --execute final_solution.ipynb --output final_solution_executed.ipynb
+```
+
+This runs the notebook headlessly and saves the executed version with all outputs embedded.
