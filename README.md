@@ -137,4 +137,4 @@ Execute all cells from top to bottom (Kernel → Restart & Run All).
 jupyter nbconvert --to notebook --execute final_solution.ipynb --output final_solution_executed.ipynb
 ```
 
-This runs the notebook headlessly and saves the executed version with all outputs embedded.
+This runs the notebook headlessly and saves the executed version with all outputs needed.
